@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintrack - Global Mobile Payment & Financial Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>FINTRACK</h1>
+        <img src="logo.png" alt="Fintrack Logo" id="logo">
+    </header>
+
+    <main>
+        <div id="slider">
+            <!-- Slide 1: Welcome and Navigation -->
+            <div id="slide-menu">
+                <h2>Hi, welcome to Fintrack</h2>
+                <p>Please enter your email address below:</p>
+                <input type="email" placeholder="Enter your email" required>
+                <p><a href="#terms">Terms of Service</a></p>
+                <button id="continue-button">Tap to continue</button>
+            </div>
+
+            <!-- Slide 2: Main Sections -->
+            <div id="slide-content">
+                <!-- Balance Section -->
+                <div id="balance-section" class="content-section active">
+                    <h2>Main Balance</h2>
+                    <p>Your current balance is:</p>
+                    <div id="balance">0.00</div>
+                    <select id="currency-selector">
+                        <option value="USD">USD</option>
+                        <option value="XAF">XAF</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                </div>
+
+                <!-- Financial Tracker Section -->
+                <div id="tracker-section" class="content-section">
+                    <h2>Financial Tracker</h2>
+                    <p>Track your expenses and income:</p>
+                    <form id="tracker-form">
+                        <input type="text" id="transaction-description" placeholder="Description" required>
+                        <input type="number" id="transaction-amount" placeholder="Amount" required>
+                        <select id="transaction-type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <button type="submit">Add Transaction</button>
+                    </form>
+                    <div id="tracker-summary">
+                        <p>Total Income: <span id="total-income">0.00</span></p>
+                        <p>Total Expenses: <span id="total-expenses">0.00</span></p>
+                        <p>Balance: <span id="tracker-balance">0.00</span></p>
+                    </div>
+                </div>
+
+                <!-- Cards Section -->
+                <div id="card-section" class="content-section">
+                    <h2>Your Cards</h2>
+                    <div id="card-list">
+                        <!-- Dynamic card elements will be added here -->
+                    </div>
+                    <div id="add-card">
+                        <button id="create-card-button">+ Create New Card</button>
+                    </div>
+                </div>
+
+                <!-- Send Money Section -->
+                <div id="send-section" class="content-section">
+                    <h2>Send Money</h2>
+                    <form id="send-money-form">
+                        <input type="text" id="recipient" placeholder="Recipient" required>
+                        <input type="number" id="amount" placeholder="Amount" required>
+                        <select id="send-currency">
+                            <option value="USD">USD</option>
+                            <option value="XAF">XAF</option>
+                            <!-- Add more currencies as needed -->
+                        </select>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+
+                <!-- Earn Money Section -->
+                <div id="earn-section" class="content-section">
+                    <h2>Earn Money</h2>
+                    <p>Ways to earn:</p>
+                    <ul>
+                        <li>Investing</li>
+                        <li>Inviting Friends</li>
+                        <li>Watching Tutorial Videos</li>
+                        <li>Subscribing to Fintrack</li>
+                        <li>Solving Quizzes and Questions</li>
+                    </ul>
+                    <button id="subscribe-button">Subscribe to Fintrack</button>
+                </div>
+
+                <!-- Receive Money Section -->
+                <div id="receive-section" class="content-section">
+                    <h2>Receive Money</h2>
+                    <div id="transaction-history">
+                        <p>Last 5 Transactions:</p>
+                        <!-- Dynamic transaction elements will be added here -->
+                    </div>
+                </div>
+
+                <!-- More Section -->
+                <div id="more-section" class="content-section">
+                    <h2>More Options</h2>
+                    <ul>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#invite">Invite</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                        <li><a href="#help">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer>
+        <button id="wallet-button"><img src="wallet-icon.png" alt="Wallet"> Wallet</button>
+        <button id="cards-button"><img src="cards-icon.png" alt="Cards"> Cards</button>
+        <button id="send-button"><img src="send-icon.png" alt="Send"> Send</button>
+        <button id="earn-button"><img src="earn-icon.png" alt="Earn"> Earn</button>
+        <button id="receive-button"><img src="receive-icon.png" alt="Receive"> Receive</button>
+        <button id="more-button"><img src="more-icon.png" alt="More"> More</button>
+    </footer>
+</body>
+</html>
